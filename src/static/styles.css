@@ -142,3 +142,23 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Make the activity list itself scrollable so the whole page doesn't need to scroll */
+#activities-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* On larger screens allow a taller activity pane */
+@media (min-width: 768px) {
+  #activities-list {
+    max-height: 800px;
+  }
+
+  /* ensure main lays out as two columns and top aligns the sections */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
